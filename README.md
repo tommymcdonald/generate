@@ -10,7 +10,11 @@ the `gen 'filetype' filename` command.
 Currently added and supported filetypes are:
 
 `cpp` or `c++`
+
+
 `perl` or `pl`
+
+
 `bash` or `sh`
 
 with more coming soon, mainly ruby, java, and c.

@@ -1,0 +1,57 @@
+#!/bin/bash
+
+FILENAME=$1
+FILETYPE=$2
+WHICHPERL=`which perl`
+WHICHBASH=`which bash`
+
+# Check for proper number of arguments (should be 2)
+if [ $# -ne 2 ]
+  then
+  echo "Error: Improper number of arguments"
+  echo "Usage: gen filename filetype"
+  echo "Example: gen newprogram cpp // results in newprogram.cpp being generated"
+  exit
+fi
+
+
+
+#===================#
+#       BASH        #
+#===================#
+
+# If statement to handle perl files
+if [ $FILETYPE = "bash" ];
+then
+printf "#!$WHICHBASH\n" > $FILENAME."sh"
+fi
+
+
+#===================#
+#       C++         #
+#===================#
+# If statement to handle cpp files
+if [ $FILETYPE = "cpp" ] || [ $FILETYPE = "c++" ];
+then
+printf "#include <iostream>
+using namespace std;\n
+int main()
+{
+  cout << \"Hello World!\";
+}" > $FILENAME."cpp"
+fi
+
+#===================#
+#       PERL        #
+#===================#
+
+# If statement to handle perl files
+if [ $FILETYPE = "pl" ] || [ $FILETYPE = "perl" ];
+then
+printf "#!$WHICHPERL\n
+use strict;
+use warnings;\n" > $FILENAME."pl"
+fi
+
+# Echo file generation was a success
+echo "$FILETYPE file titled $FILENAME generated"

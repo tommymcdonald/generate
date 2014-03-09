@@ -11,7 +11,7 @@ if [ $# -ne 2 ]
   then
   echo "Error: Improper number of arguments"
   echo "Usage: gen filetype  filename"
-  echo "Example: gen newprogram cpp // results in newprogram.cpp being generated"
+  echo "Example: gen cpp newprogram // results in newprogram.cpp being generated"
   exit
 fi
 

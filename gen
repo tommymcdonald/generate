@@ -21,7 +21,7 @@ fi
 #===================#
 
 # If statement to handle perl files
-if [ $FILETYPE = "bash" ];
+if [ $FILETYPE = "bash" ] || [ $FILETYPE = "sh" ] ;
 then
 printf "#!$WHICHBASH\n" > $FILENAME."sh"
 fi

@@ -5,7 +5,7 @@ Bash script to generate default headers for a few of my most commonly used scrip
 
 
 If you want to use this, move the `gen` file to your `/usr/bin` directory and run
-the `gen 'filetype' filename` command.
+the `gen 'filename' 'filetype'` command.
 
 Currently added and supported filetypes are:
 

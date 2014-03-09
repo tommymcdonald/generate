@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FILENAME=$1
-FILETYPE=$2
+FILETYPE=$1
+FILENAME=$2
 WHICHPERL=`which perl`
 WHICHBASH=`which bash`
 
@@ -9,7 +9,7 @@ WHICHBASH=`which bash`
 if [ $# -ne 2 ]
   then
   echo "Error: Improper number of arguments"
-  echo "Usage: gen filename filetype"
+  echo "Usage: gen filetype  filename"
   echo "Example: gen newprogram cpp // results in newprogram.cpp being generated"
   exit
 fi

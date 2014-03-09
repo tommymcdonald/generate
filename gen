@@ -4,6 +4,7 @@ FILETYPE=$1
 FILENAME=$2
 WHICHPERL=`which perl`
 WHICHBASH=`which bash`
+WHICHRUBY=`which ruby`
 
 # Check for proper number of arguments (should be 2)
 if [ $# -ne 2 ]
@@ -40,6 +41,17 @@ int main()
   cout << \"Hello World!\";
 }" > $FILENAME."cpp"
 fi
+
+#===================#
+#       RUBY        #
+#===================#
+# If statement to handle ruby files
+if [ $FILETYPE = "ruby" ] || [ $FILETYPE = "rb" ];
+then
+printf "#!$WHICHRUBY\n" > $FILENAME."rb"
+fi
+
+
 
 #===================#
 #       PERL        #

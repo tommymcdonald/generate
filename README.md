@@ -17,3 +17,5 @@ Currently added and supported filetypes are:
 
 
 `bash` or `sh`
+
+`python` or `py`

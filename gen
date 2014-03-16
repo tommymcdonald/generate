@@ -5,7 +5,6 @@ FILENAME=$2
 WHICHPERL=`which perl`
 WHICHBASH=`which bash`
 WHICHRUBY=`which ruby`
-WHICHPYTHON=`which python`
 
 # Check for proper number of arguments (should be 2)
 if [ $# -ne 2 ]
@@ -58,7 +57,7 @@ fi
 # If statement to handle python files
 if [ $FILETYPE = "python" ] || [ $FILETYPE = "py" ];
 then
-printf "#!$WHICHPYTHON\n" > $FILENAME."py"
+printf "#!/usr/bin/env python \n\n" > $FILENAME."py"
 fi
 
 

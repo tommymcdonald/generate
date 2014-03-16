@@ -55,7 +55,7 @@ fi
 #===================#
 #       PYTHON      #
 #===================#
-# If statement to handle ruby files
+# If statement to handle python files
 if [ $FILETYPE = "python" ] || [ $FILETYPE = "py" ];
 then
 printf "#!$WHICHPYTHON\n" > $FILENAME."py"
